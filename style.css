@@ -1,0 +1,214 @@
+@font-face{
+	font-family: 'Bungee';
+	src: url('fonts/Bungee.ttf');
+}
+/* reset css */
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: montserrat, Calibri, sans-serif;
+	scroll-behavior: smooth;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+header nav a{
+	text-decoration: none;
+}
+
+/* Header */
+header{
+	background-color:#ffffff;
+	padding-bottom: 5%;
+}
+header nav i{
+    color: #79b7ea;
+}
+h1{
+	display: none;
+}
+#logo{
+	width: 100%;
+	padding: 0 0;
+    display: block;
+    text-align: center;
+    border-bottom: 0.5em solid #79b7ea;
+}
+#burger{
+    padding: 1em 0;
+    display: block;
+    text-align: center;
+}
+#nav-link{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+    font-family: 'Bungee';
+    text-transform: uppercase;
+}
+#nav-link a{
+	padding: 1em 0;
+	color: #000;
+	transition-duration: 0.5s;
+	font-size: 1.5rem;
+    font-family: montserrat;
+}
+#nav-link a:visited{
+	color: #000;
+}
+#nav-link a:active{
+	color: #000;
+}
+#nav-link a:hover{
+	color: #000;
+    text-decoration: underline #93c3ea;
+	transition-duration: 0.5s;
+}
+@media screen and (min-width: 1024px){
+	header{
+		display: flex;
+		padding-bottom: 0;
+        border-bottom: 0.7em solid #79b7ea;
+	}
+    #burger{
+        display: none;
+    }
+	#logo{
+		width: 35%;
+        padding: 0 0;
+        border-bottom: none;
+	}
+	#nav-link{
+		width: 100%;
+        text-transform: none;
+        font-size: 0.7em;
+		display: inline-block;
+		padding-top: 45px;
+	}
+    #nav-link a{
+        padding-right: 1em;
+    }
+}
+/* Main */
+#poster{
+    padding: 0 0;
+    margin: 0 0;
+    background-color: #E7F3FF;
+}
+section{
+    padding: 0 0;
+    margin: 0 0;
+}
+section h2{
+    margin: 0 0;
+    padding: 1em 0;
+    font-size: 3rem;
+    text-align: center;
+}
+section h3{
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+section span{
+    margin: 0 0;
+    padding: 0 0 1em 0;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    font-style: italic;
+}
+section p{
+    margin: 0 0;
+    padding: 5% 5% 10% 5%;
+    text-align: justify;
+}
+/* Section Présentation */
+#presentation{
+    background-color: #E7F3FF;
+}
+@media screen and (min-width: 1024px){
+
+}
+/*Section Expériences pro*/
+#expPro{
+    background-color: #fff;
+}
+@media screen and (min-width: 1024px){
+
+}
+/*Section Education*/
+#education{
+    background-color: #FFDACC;
+}
+#courseraLink{
+    max-height: 20%;
+    display: block;
+    text-align: center;
+    padding: 0 0 1em 0;
+}
+#coursera{
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+   
+#coursera::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+   
+#coursera:hover{
+    color: #e8e8e8;
+   }
+   
+#coursera:hover::before{
+    width: 100%;
+}
+@media screen and (min-width: 1024px){
+
+}
+/*Section Compétences*/
+#skills{
+    background-color: #E7F3FF;
+}
+@media screen and (min-width: 1024px){
+
+}
+/*Section Contact*/
+#contact{
+    background-color: #fff;
+}
+@media screen and (min-width: 1024px){
+
+}
+fieldset{
+    background-color: #FFDACC;
+    font-size: 1rem;
+}
+/* Footer */
+footer{
+    background-color: #E7F3FF;
+}
