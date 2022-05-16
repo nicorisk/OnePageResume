@@ -1,6 +1,6 @@
 @font-face{
-	font-family: 'Bungee';
-	src: url('fonts/Bungee.ttf');
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat.ttf');
 }
 /* reset css */
 html, body{
@@ -169,7 +169,7 @@ section p{
     text-align: center;
     padding: 0 0 1em 0;
 }
-#coursera{
+#coursera, #okContact{
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
@@ -185,7 +185,7 @@ section p{
     overflow: hidden;
 }
    
-#coursera::before{
+#coursera::before, #okContact::before{
     content: "";
     position: absolute;
     top: 0;
@@ -200,11 +200,11 @@ section p{
     transition: all 250ms
 }
    
-#coursera:hover{
+#coursera:hover, #okContact:hover{
     color: #e8e8e8;
    }
    
-#coursera:hover::before{
+#coursera:hover::before, #okContact:hover::before{
     width: 100%;
 }
 @media screen and (min-width: 1024px){
@@ -253,9 +253,6 @@ section p{
 #contact{
     background-color: #FFDACC;
 }
-@media screen and (min-width: 1024px){
-
-}
 fieldset{
     background-color: #FFDACC;
     font-size: 1rem;
@@ -289,6 +286,24 @@ textarea{
 	height: 40px;
 	margin-top: 2%;
 	margin-left: 35%;
+}
+@media screen and (min-width: 1024px){
+    #contact h2{
+        padding: 1em 0;
+    }
+    #contact article{
+        padding-bottom: 2em;
+    }
+    form{
+        display: block;
+        width: 60%;s
+    }
+    .flex-formulaire input{
+        margin: 0 0;
+    }
+    .flex-formulaire label{
+        padding-top: 10px;
+    }
 }
 /* Footer */
 footer{
