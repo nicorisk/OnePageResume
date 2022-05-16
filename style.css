@@ -8,6 +8,7 @@ html, body{
 	padding: 0;
 	font-family: montserrat, Calibri, sans-serif;
 	scroll-behavior: smooth;
+    background-color: #E7F3FF;
 }
 img{
 	max-width: 100%;
@@ -25,7 +26,7 @@ header{
 header nav i{
     color: #79b7ea;
 }
-h1{
+.noDisplay{
 	display: none;
 }
 #logo{
@@ -125,19 +126,38 @@ section p{
     padding: 5% 5% 10% 5%;
     text-align: justify;
 }
+@media screen and (min-width: 1024px){
+    section h2{
+        padding: 0.5em 0 0 0;
+    }
+    section p{
+        padding: 2em 2em;
+        font-size: 1.5rem;
+    }
+}
 /* Section Présentation */
 #presentation{
     background-color: #E7F3FF;
-}
-@media screen and (min-width: 1024px){
-
 }
 /*Section Expériences pro*/
 #expPro{
     background-color: #fff;
 }
 @media screen and (min-width: 1024px){
-
+    .XP{
+        display: flex;
+        align-items: center;
+    }
+    .XP h3{
+        width: 20%;
+    }
+    .XP span{
+        padding: 0 0;
+        width: 10%;
+    }
+    .XP p{
+        width: 65%;
+    }
 }
 /*Section Education*/
 #education{
@@ -188,18 +208,50 @@ section p{
     width: 100%;
 }
 @media screen and (min-width: 1024px){
-
+    .school{
+        display: flex;
+        align-items: center;
+    }
+    .school h3{
+        width: 20%;
+    }
+    .school span{
+        padding: 0 0;
+        width: 8%;
+    }
 }
 /*Section Compétences*/
 #skills{
     background-color: #E7F3FF;
 }
 @media screen and (min-width: 1024px){
-
+    #skills h2{
+        padding: 1em 0;
+    }
+    #skillsContainer{
+        display: flex;
+        align-items: stretch;
+        flex-flow: row;
+        justify-content: space-evenly;
+        padding-bottom: 2em;
+    }
+    .flexSkills{
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        width: 25%
+    }
+    .flexSkills h3{
+        width: 20%;
+    }
+    .flexSkills span{
+        padding: 0 0;
+        width: 8%;
+    }
 }
 /*Section Contact*/
 #contact{
-    background-color: #fff;
+    background-color: #FFDACC;
 }
 @media screen and (min-width: 1024px){
 
@@ -207,8 +259,42 @@ section p{
 fieldset{
     background-color: #FFDACC;
     font-size: 1rem;
+    margin: 0 0;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+.flex-formulaire{
+    display: flex;
+    flex-flow: column wrap;
+}
+.flex-formulaire input{
+    height: 25px;
+    width: 70%;
+	margin-top: 2%;
+	border-radius: 5px;
+	border: groove 2px #b2b2b2;
+}
+textarea{
+	height: 80px;
+	width: 98%;
+	display: block;
+	margin-top: 2%;
+	border-radius: 5px;
+	border: groove 2px #b2b2b2;
+}
+#okContact{
+	width: 30%;
+	height: 40px;
+	margin-top: 2%;
+	margin-left: 35%;
 }
 /* Footer */
 footer{
     background-color: #E7F3FF;
+    min-height: 3em;
+    text-align: center;
+    padding-top: 1em;
+    font-style: italic;
 }

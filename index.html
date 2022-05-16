@@ -3,14 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Nicolas Debève - CV</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" >
 		<meta name="author" content="Nicolas DEBEVE">
+		<meta name="description" content="CV Nicolas Debève">
+		<meta name="keywords" content="Nicolas Debève, Nicolas Debeve, CV Nicolas Debève, CV Nicolas Debeve, linkedin Nicolas Debève, linkedin Nicolas Debeve">
 	</head>
 	<body>
 		<header>
-			<h1>CV Nicolas Debève</h1>
+			<h1 class="noDisplay">CV Nicolas Debève</h1>
 			<a href="index.html" id="logo"><img src="img/logo.png" alt="logo"></a>
 			<span id="burger"><i class="menu-toggle-btn fas fa-bars"></i></span>
 			<nav id="nav-link">
@@ -23,9 +26,9 @@
 			</nav>
 		</header>
 		<main>
-			<section id="poster">
+			<div id="poster">
 				<img src="img/poster.png" alt="Poster de Nicolas Debève">
-			</section>
+			</div>
 			<section id="presentation">
 				<h2>Présentation</h2>
 				<p>Je m’appelle Nicolas Debève, après avoir travaillé dans le monde du spectacle, j’ai repris des études en informatique et systèmes orientation réseaux et télécommunications en septembre 2020 à la HEH à Mons. Je suis actuellement en 2e année de bachelier, et je poursuis mes études dans l’option sécurité proposée dans le cursus.</p>
@@ -50,70 +53,73 @@
 			</section>
 			<section id="education">
 				<h2>Éducation</h2>
-				<article>
-					<h3>Haute École en Hainaut</h3>
+				<article class="school">
+					<h3>Haute École en Hainaut - Mons</h3>
 					<span>2020 - 2023</span>
 					<p>Bachelier en Infortmatique & Systèmes orientation réseaux & télécommunications, option sécurité</p>
 				</article>
-				<article>
-					<h3>Institut Saint-François Ath</h3>
+				<article class="school">
+					<h3>Institut Saint-François - Ath</h3>
 					<span>2012 - 2018</span>
-					<p>CESS, Sciences sociales et éducatives</p>
+					<p>CESS en Sciences sociales et éducatives</p>
 				</article>
 				<h2>Certifications</h2>
 				<article>
 					<h3>Google IT Support Professional Certificate</h3>
 					<span>Obtenu en 2020</span>
-					<a href="https://www.coursera.org/account/accomplishments/specialization/certificate/BCJV6UVAJAWY" target="_blank" id="courseraLink"><button id="coursera">Lien vers le certificat</button></a>
+					<span id="courseraLink"><button id="coursera" onclick="location.href='https://www.coursera.org/account/accomplishments/specialization/certificate/BCJV6UVAJAWY';" value="Lien vers le certificat">Lien vers le certificat</button></span>
 				</article>
 			</section>
 			<section id="skills">
 				<h2>Compétences</h2>
-				<article>
-					<h3>Outils</h3>
-					<ul>
-						<li>Linux</li>
-						<li>Windows Server</li>
-						<li>VMware Workstation</li>
-						<li>Hyper-V</li>
-						<li>Docker</li>
-						<li>Cisco Packet Tracer</li>
-						<li>Adobe Photoshop</li>
-					</ul>
-				</article>
-				<article>
-					<h3>Languages</h3>
-					<ul>
-						<li>C</li>
-						<li>C#/.NET</li>
-						<li>Python</li>
-						<li>HTML5</li>
-						<li>CSS3</li>
-						<li>JavaScript</li>
-						<li>JQuery</li>
-						<li>MySQL</li>
-					</ul>
-				</article>
-				<article>
-					<h3>Soft Skills</h3>
-					<ul>
-						<li>Travail d'équipe</li>
-						<li>Communication</li>
-						<li>Résolutions de problèmes</li>
-						<li>Organisation</li>
-					</ul>
-				</article>
-				<article>
-					<h3>Langues</h3>
-					<ul>
-						<li>Français</li>
-						<li>Anglais (C1 CEFR)</li>
-					</ul>
-				</article>
+				<div id="skillsContainer">
+					<article class="flexSkills">
+						<h3>Outils</h3>
+						<ul>
+							<li>Linux</li>
+							<li>Windows Server</li>
+							<li>VMware Workstation</li>
+							<li>Hyper-V</li>
+							<li>Docker</li>
+							<li>Cisco Packet Tracer</li>
+							<li>Adobe Photoshop</li>
+						</ul>
+					</article>
+					<article class="flexSkills">
+						<h3>Languages</h3>
+						<ul>
+							<li>C</li>
+							<li>C#/.NET</li>
+							<li>Python</li>
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>JavaScript</li>
+							<li>JQuery</li>
+							<li>MySQL</li>
+						</ul>
+					</article>
+					<article class="flexSkills">
+						<h3>Soft Skills</h3>
+						<ul>
+							<li>Travail d'équipe</li>
+							<li>Communication</li>
+							<li>Résolutions de problèmes</li>
+							<li>Organisation</li>
+						</ul>
+					</article>
+					<article class="flexSkills">
+						<h3>Langues</h3>
+						<ul>
+							<li>Français</li>
+							<li>Anglais (C1 CEFR)</li>
+						</ul>
+					</article>
+			</div>
 			</section>
 			<section id="contact">
+				<h2>Contact</h2>
 				<article>
-					<h2>Contact</h2>
+					<h3 class="noDisplay">Conctactez-moi !</h3>
 					<form action="mailto:nicolas.debeve@std.heh.be" method="post" autocomplete="on" enctype="text/plain">
 						<fieldset>
 							<legend>Vous voulez prendre contact avec moi ? C'est par ici !</legend>
@@ -139,7 +145,7 @@
 			</section>
 		</main>
 		<footer>
-			© 2022 Nicolas Debève
+			© 2022 - Nicolas Debève
 		</footer>
 	</body>
 </html>
