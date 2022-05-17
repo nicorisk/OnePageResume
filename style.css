@@ -6,7 +6,7 @@
 html, body{
 	margin: 0;
 	padding: 0;
-	font-family: montserrat, Calibri, sans-serif;
+	font-family: Montserrat, Calibri, sans-serif;
 	scroll-behavior: smooth;
     background-color: #E7F3FF;
 }
@@ -17,7 +17,6 @@ img{
 header nav a{
 	text-decoration: none;
 }
-
 /* Header */
 header{
 	background-color:#ffffff;
@@ -36,16 +35,27 @@ header nav i{
     text-align: center;
     border-bottom: 0.5em solid #79b7ea;
 }
-#burger{
-    padding: 1em 0;
-    display: block;
+.btn-nav{
+    display: block !important;
     text-align: center;
+    font-size: 1.5em;
+    padding-top: 1em;
+    cursor: pointer;
+}
+.btn-nav:hover, .btn-nav:focus{
+    color:#79b7ea;
+}
+.btn-nav:active{
+    color: #79b7ea;
+}
+#menu-nav{
+    display: none;
 }
 #nav-link{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-    font-family: 'Bungee';
+    font-family: 'Montserrat';
     text-transform: uppercase;
 }
 #nav-link a{
@@ -72,11 +82,14 @@ header nav i{
 		padding-bottom: 0;
         border-bottom: 0.7em solid #79b7ea;
 	}
-    #burger{
-        display: none;
+    .btn-nav{
+        display: none !important;
+    }
+    #menu-nav{
+        display: block !important;
     }
 	#logo{
-		width: 35%;
+		width: 30%;
         padding: 0 0;
         border-bottom: none;
 	}
@@ -92,6 +105,9 @@ header nav i{
     }
 }
 /* Main */
+#infosPerso{
+    display: none;
+}
 #poster{
     padding: 0 0;
     margin: 0 0;
@@ -125,6 +141,22 @@ section p{
     margin: 0 0;
     padding: 5% 5% 10% 5%;
     text-align: justify;
+}
+.apparitionTitre{
+    transition: 1s;
+    opacity: 1;
+}
+.apparitionTitre.invisible{
+    opacity: 0;
+    transition: 0s;
+}
+.apparition{
+    transition: 1.5s;
+    opacity: 1;
+}
+.apparition.invisible{
+    opacity: 0;
+    transition: 0s;
 }
 @media screen and (min-width: 1024px){
     section h2{
@@ -179,7 +211,6 @@ section p{
     position: relative;
     font-weight: 1000;
     font-size: 17px;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     transition: all 250ms;
     overflow: hidden;
@@ -195,7 +226,6 @@ section p{
     border-radius: 15px;
     background-color: #212121;
     z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     transition: all 250ms
 }
@@ -223,6 +253,26 @@ section p{
 /*Section Compétences*/
 #skills{
     background-color: #E7F3FF;
+}
+.softskills h3{
+    text-align: left;
+}
+li{
+    list-style: none;
+
+    padding-top: 10%;
+}
+.ul-tools li{
+    list-style-image: url("icons/tools.png");;
+}
+.ul-coding li{
+    list-style: url("icons/coding.png");
+}
+.ul-check li{
+    list-style: url("icons/checkbox.svg");
+}
+.ul-arrow li{
+    list-style: url("icons/arrow-right.png");
 }
 @media screen and (min-width: 1024px){
     #skills h2{
@@ -282,8 +332,6 @@ textarea{
 	border: groove 2px #b2b2b2;
 }
 #okContact{
-	width: 30%;
-	height: 40px;
 	margin-top: 2%;
 	margin-left: 35%;
 }
@@ -293,23 +341,37 @@ textarea{
     }
     #contact article{
         padding-bottom: 2em;
+        text-align: center;
     }
     form{
-        display: block;
-        width: 60%;s
+        display: inline-block;
+        width: 45%;
     }
-    .flex-formulaire input{
-        margin: 0 0;
+    fieldset{
+        border-radius: 15px;
+        padding-bottom: 20px;
     }
     .flex-formulaire label{
         padding-top: 10px;
+        text-align: left;
+    }
+    .flex-formulaire input{
+        border: solid 1px grey;
+        width: 20em;
+    }
+    textarea{
+        margin: 2% 0;
+        font-size: 1em;
+        border: solid 1px grey;
+    }
+    #okContact{
+        margin: 0 0;
     }
 }
 /* Footer */
 footer{
     background-color: #E7F3FF;
-    min-height: 3em;
     text-align: center;
-    padding-top: 1em;
     font-style: italic;
+    padding: 2%;
 }
