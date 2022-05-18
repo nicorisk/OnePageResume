@@ -175,7 +175,6 @@ section p{
 #expPro{
     background-color: #fff;
 }
-
 @media screen and (min-width: 1024px){
     .XP{
         display: flex;
